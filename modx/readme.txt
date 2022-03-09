@@ -1,0 +1,1 @@
+These are little javascript bits that are hosted here so they can be included by modx on the main site.

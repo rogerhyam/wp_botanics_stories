@@ -1,0 +1,427 @@
+/**
+ * Theme Name: Suffu-scion
+ * Theme URI: http://your.theme.uri/
+ * Description: A starter child theme for Suffusion. In the line that says "Tags:" below, add buddypress if this is being used for BuddyPress. E.g. "Tags: buddypress"
+ * Version: 1.0.0
+ * Author: Sayontan Sinha
+ * Author URI: http://mynethome.net/blog
+ * Template: suffusion
+ * Tags:
+ */
+
+/**
+ * No @import declarations are necessary if you go to Suffusion Options -> Back-end -> Child Themes -> Inherit styles, and Inherit all stylesheets.
+ * Otherwise import as follows.
+ */
+
+/* Always include this first if you are not inheriting */
+/* @import url("../suffusion/style.css"); */
+
+/* Include this if you are not inheriting and you wish to have rounded corners */
+/* @import url("../suffusion/rounded-corners.css"); */
+
+/* Include this for your specific skin if you are not inheriting */
+/* @import url("../suffusion/skins/light-theme-royal-blue/skin.css"); */
+
+/* Include this if you are using a dark theme and you are not inheriting. This is not needed for newer skins like Minima or Photonique */
+/* @import url("../suffusion/dark-style.css"); */
+
+/* Include this for your specific skin if you are using a dark theme and you are not inheriting */
+/* @import url("../suffusion/skins/dark-theme-royal-blue/skin.css"); */
+
+/**
+ * Define additional styles here. Note that the styles defined through options will override these styles.
+ * To override those styles you have to increase the CSS specificity here. For more on specificity see
+ */
+
+ /* fix issues with light box */
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+/* HEADER TWEAKING */
+header#header{
+    height: 72px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+#wrapper #header-container{
+    background-position: center top;
+}
+
+#rbge_header_logo{
+    color: white;
+    float: right;
+    width: 200px;
+    height: 65px;
+/*    border: solid white 1px; */
+    margin-top: 10px;
+    margin-right: 40px;
+    background-image:url('images/logo_white_on_transparent_200.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    /*background-color: gray;*/
+}
+
+#right-header-widgets{
+    margin-right: 50px;
+    margin-top: 4px;
+}
+
+header .blogtitle{
+    float:none;
+    margin-right: 220px;
+    padding-left: 9px;
+/*
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    */
+}
+
+header#header .description{
+    float: none;
+    text-align: left;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+header#header h1 a,
+header#header h2 a{
+	/*	text-shadow: h-shadow v-shadow blur color; - not in IE */
+	text-shadow: 2px 2px 2px black;
+}
+
+/* turn off the sub-title when the screen gets too narrow */
+@media all and (max-width: 620px) and (min-width: 0px){
+
+}
+
+/* shrink the main title when the screen gets really narrow */
+@media all and (max-width: 600px) and (min-width: 0px){
+    #header .blogtitle{
+        font-size: 2em;
+         margin-right: 0px;
+    }
+    #header .description{
+        display:none;
+    }
+    #rbge_header_logo{
+        margin-left: 10px;
+        float: left;
+        width: 100%;
+    }
+    header#header{
+        height: 100px;
+    }
+    #header-container{
+         height: 152px;
+         
+     }
+     #wrapper #header-container{
+         background-image:url('images/beech-hedge_mobile_600.jpg');
+     }
+     /* move the search box left */
+    #right-header-widgets{
+        float: left;
+    }
+    
+    #header-container .tinynav{
+        display: none;
+    }
+    
+    #nav{
+        border-bottom: none;
+    }
+    
+    .tinynav{
+        width: 300px;
+    }
+    
+}
+
+
+/* tweek for mobile embedded youtube vids*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    text-align: center;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* User Profiles Tweek */
+.author-description .photo{
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border: solid gray 1px;
+    float: left;
+}
+
+.post-footer .vcard a{
+    font-size: 122%;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* SHAREAHOLICS TWEAKING */
+.entry-container .entry.fix{
+    border-bottom: solid gray 1px;
+}
+
+
+/* Mobile Fix 
+    When in mobile view it displays the left-thumbnail image
+    This means that setting the featured image breaks the mobile layout
+     - so we are turning it off
+*/
+.entry-container .left-thumbnail{
+    display: none;
+}
+
+
+
+/* EDIBLE GARDENING PROJECT */
+article#post-797,
+article.category-edible-gardening-project{
+	background-image:url('images/postcode_lottery_header.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FBFDF5;*/
+	border: solid green 1px;
+}
+
+article#post-797 code{
+	background-color: transparent;
+}
+
+article.category-edible-gardening-project .wp-caption{
+	border: solid 1px gray;
+}
+
+/* KASIA'S PLOT PROJECT */
+article.tag-kasias-plot{
+	background-image:url('images/kasias_plot_header.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FBFDF5;*/
+	border: solid green 1px;
+}
+
+/* Big5 Plants Project*/
+article.tag-scotlands-big-five{
+	background-image:url('images/big5/dog_rose.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FBFDF5;*/
+	border: solid green 1px;
+}
+
+
+article.tag-kasias-plot .wp-caption{
+	border: solid 1px gray;
+}
+
+/* WILDLIFE IN THE GARDEN */
+article.category-garden-wildlife{
+	background-image:url('images/wildlife_garden.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FFFCF2; */
+}
+
+/* WILDLIFE IN THE GARDEN */
+article.tag-bioblitz-2013{
+	background-image:url('images/bioblitz_2013.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FFFCF2; */
+}
+
+/* RBGE COLOMBIA */
+article.category-colombia{
+	background-image:url('images/colombia_header.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FFFCF2; */
+
+}
+
+/* World War 1 Banner */
+article.tag-ww1{
+	background-image:url('images/ww1_banner.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 87px;
+	/* background-color: #FFFCF2; */
+}
+
+/* Amorphophallus  */
+article.tag-amorphophallus{
+	background-image:url('images/Amorphophallus_titanum.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top: 100px;
+	/* background-color: #FFFCF2; */
+}
+
+/* Edinburgh Living Landscapes  */
+article.tag-edinburgh-living-landscape{
+	background-image:url('images/ell_03.jpg');
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 100px;
+	/* background-color: #FFFCF2; */
+}
+
+article.category-colombia ul li code{
+	background-color: transparent;
+}
+
+article.category-colombia .wp-caption{
+	border: solid 1px gray;
+}
+
+article.category-colombia .gallery-item dd{
+	font-style: normal;
+	font-size: 90%;
+}
+
+
+
+/* TWITTER MONITOR POSTS */
+
+.twitter_digest_tweet{
+	border-bottom: solid gray 1px;
+	margin-bottom: 1em;
+}
+
+article.category-horticulture{
+	/* border: solid blue 1px; */
+}
+
+.twitter_digest_head{
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.twitter_digest_head img{
+	border: solid 1px gray;
+	margin-right: 1em;
+	float: left;
+}
+
+.twitter_digest_map,
+.twitter_digest_media{
+	text-align: center;
+}
+
+/* hide the featured image */
+.left-thumbnail{
+	display: none;
+}
+
+/* NEXT - PREVIOUS TRAIL NAVIGATION */
+
+.rbge-trail-nav-wrapper{
+    clear:both;
+    width: 100%;
+    vertical-align:middle;
+    overflow: hidden;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.rbge-trail-nav-previous,
+.rbge-trail-nav-next{
+    border-radius: 20px;
+    vertical-align:middle;
+    display: block;
+    background: url("../suffusion/images/bg-gray-1.png") repeat-x scroll left top #A5A7AA;
+    color: #444444;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    
+}
+
+a.rbge-trail-nav-previous:hover,
+a.rbge-trail-nav-next:hover{
+    text-decoration: none;
+}
+
+a.rbge-trail-nav-previous:visited,
+a.rbge-trail-nav-next:visited{
+    color: #444444;
+}
+
+.rbge-trail-nav-previous{
+    float:left;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.rbge-trail-nav-next{
+    float:right;
+    padding-left: 1em;
+    text-align: right;
+}
+
+.rbge-trail-nav-label{
+    color: transparent;
+    background-color: blue;
+    width: 30px;
+    height: 100%;
+    padding: 2px;
+    display: inline-block;
+}
+
+.rbge-trail-nav-next .rbge-trail-nav-label{
+    background: url("/wp-content/themes/botanics_stories/images/right_arrow_25px.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+.rbge-trail-nav-previous .rbge-trail-nav-label{
+    background: url("/wp-content/themes/botanics_stories/images/left_arrow_25px.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.rbge-pledge-o-matic-main,
+.rbge-pledge-o-matic-thumb{
+    border: solid gray 1px;
+    padding: 4px;
+}
+
+.rbge-pledge-o-matic-thumb{
+    margin-left: 18px;
+}
+
+div.newsletter-subscription{ 
+        overflow:auto;
+        padding: 1em;
+        text-align: center;
+}
+
